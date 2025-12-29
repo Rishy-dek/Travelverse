@@ -4,7 +4,7 @@
 
 </div>
 
-<p style="color: #1F1F1F;">Invisible Placeholder</p>
+
 
 This project was made possible through the use of modern development tools, AI-assisted programming systems, and open-source software. The following acknowledgements provide transparent and accurate attribution.
 
@@ -88,3 +88,4 @@ This repository intentionally discloses the use of AI-assisted code generation.
 ## Final Thanks
 
 Thank you to the open-source community, tool creators, and platform maintainers whose work enables learning, experimentation, and innovation in software development 🌍✈️
+
