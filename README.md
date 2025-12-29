@@ -10,7 +10,7 @@
 
 </dev>
 
-<dev align = "center">
+
 
 ![GitHub stars](https://img.shields.io/github/stars/Rishy-dek/Travel-Genie) 
 
@@ -21,7 +21,6 @@ Travel-Genie is a web app that helps users plan trips effortlessly. Enter a dest
 
 **Live Demo:** <https://travel-genie--rishaannandan9.replit.app>
 
-</dev>
 
 ---
 
