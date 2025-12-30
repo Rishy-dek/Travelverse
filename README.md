@@ -10,12 +10,12 @@
 
 </dev>
 
-[![GitHub stars](https://img.shields.io/github/stars/Rishy-dek/Travel-Genie) ![Repository License](https://img.shields.io/github/license/Rishy-dek/Travel-Genie) ![Repository's Last Commit](https://img.shields.io/github/last-commit/Rishy-dek/Travel-Genie) ![Repository's Contributors](https://img.shields.io/github/contributors/Rishy-dek/Travel-Genie) ![GitHub Forks](https://img.shields.io/github/forks/Rishy-dek/Travel-Genie)](https://github.com/Rishy-dek/Travel-Genie) [![GitHub Releases](https://img.shields.io/github/downloads/Rishy-dek/Travel-Genie/total)](https://github.com/Rishy-dek/Travel-Genie/releases) 
+[![GitHub stars](https://img.shields.io/github/stars/Rishy-dek/Travel-Genie) ![Repository License](https://img.shields.io/github/license/Rishy-dek/Travel-Genie) ![Repository's Last Commit](https://img.shields.io/github/last-commit/Rishy-dek/Travel-Genie) ![Repository's Contributors](https://img.shields.io/github/contributors/Rishy-dek/Travel-Genie) ![GitHub Forks](https://img.shields.io/github/forks/Rishy-dek/Travel-Genie)](https://github.com/Rishy-dek/Travel-Genie) [![GitHub Releases](https://img.shields.io/github/downloads/Rishy-dek/Travel-Genie/total)](https://github.com/Rishy-dek/Travel-Genie/releases) [![Issues](https://img.shields.io/github/issues/Rishy-dek/Travel-Genie?style=for-the-badge&logo=github&color=red)](https://github.com/Rishy-dek/Travel-Genie/issues)
 
 
 [![Join Discord](https://img.shields.io/badge/Discord-Join%20Our%20Server-5865F2?logo=discord)](https://discord.gg/ykUv4kfg) [![Live Demo](https://img.shields.io/badge/Live-demo-Green?logo=live)](https://travel-genie--rishaannandan9.replit.app) 
 
-[![.gtihub ](https://img.shields.io/badge/Discord-Join%20Our%20Server-5865F2?logo=discord)](https://discord.gg/ykUv4kfg) [![Version](https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge)](https://github.com/Rishy-dek/Travel-Genie/releases)  
+![Travel Genie](https://img.shields.io/badge/Travel%20Genie-active-brightgreen?style=for-the-badge) [![Version](https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge)](https://github.com/Rishy-dek/Travel-Genie/releases)  
 
 **Description**  
 Travel-Genie is a web app that helps users plan trips effortlessly. Enter a destination and travel preferences, then get personalized itineraries, suggestions, and travel details — powered by modern web technologies and AI-assisted logic.
