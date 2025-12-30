@@ -1,88 +1,76 @@
 [![Travel-Genie Logo](https://replit.com/cdn-cgi/image/width=128,quality=80,format=auto/https://storage.googleapis.com/replit/images/1766866019980_547f64dbeca56e2966407975525ee9ce.png)](https://travel-genie--rishaannandan9.replit.app)
 
-# <p style="color: #CB8362">✈️ Travel Genie</p>
+# <p align="center" style="color: #CB8362">✈️ Travel Genie</p>
 
+<p align="center">
+  [![GitHub stars](https://img.shields.io/github/stars/Rishy-dek/Travel-Genie?style=for-the-badge&logo=github)](https://github.com/Rishy-dek/Travel-Genie)
+  [![License](https://img.shields.io/github/license/Rishy-dek/Travel-Genie?style=for-the-badge)](https://github.com/Rishy-dek/Travel-Genie/blob/main/LICENSE)
+  [![Last Commit](https://img.shields.io/github/last-commit/Rishy-dek/Travel-Genie?style=for-the-badge)](https://github.com/Rishy-dek/Travel-Genie/commits/main)
+  [![Contributors](https://img.shields.io/github/contributors/Rishy-dek/Travel-Genie?style=for-the-badge)](https://github.com/Rishy-dek/Travel-Genie/graphs/contributors)
+  [![Forks](https://img.shields.io/github/forks/Rishy-dek/Travel-Genie?style=for-the-badge&logo=github)](https://github.com/Rishy-dek/Travel-Genie/network)
+  [![Downloads](https://img.shields.io/github/downloads/Rishy-dek/Travel-Genie/total?style=for-the-badge)](https://github.com/Rishy-dek/Travel-Genie/releases)
+  [![Issues](https://img.shields.io/github/issues/Rishy-dek/Travel-Genie?style=for-the-badge&logo=github&color=red)](https://github.com/Rishy-dek/Travel-Genie/issues)
+</p>
 
+<p align="center">
+  [![Join Discord](https://img.shields.io/badge/Discord-Join%20Our%20Server-5865F2?logo=discord&style=for-the-badge)](https://discord.gg/ykUv4kfg)
+  [![Live Demo](https://img.shields.io/badge/Live-Demo-green?logo=live&style=for-the-badge)](https://travel-genie--rishaannandan9.replit.app)
+  [![Version](https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge)](https://github.com/Rishy-dek/Travel-Genie/releases)
+</p>
 
-[![GitHub stars](https://img.shields.io/github/stars/Rishy-dek/Travel-Genie) ![Repository License](https://img.shields.io/github/license/Rishy-dek/Travel-Genie) ![Repository's Last Commit](https://img.shields.io/github/last-commit/Rishy-dek/Travel-Genie) ![Repository's Contributors](https://img.shields.io/github/contributors/Rishy-dek/Travel-Genie) ![GitHub Forks](https://img.shields.io/github/forks/Rishy-dek/Travel-Genie)](https://github.com/Rishy-dek/Travel-Genie) [![GitHub Releases](https://img.shields.io/github/downloads/Rishy-dek/Travel-Genie/total)](https://github.com/Rishy-dek/Travel-Genie/releases) [![Issues](https://img.shields.io/github/issues/Rishy-dek/Travel-Genie?logo=github&color=red)](https://github.com/Rishy-dek/Travel-Genie/issues)
+---
 
+## 🌟 Description
 
-[![Join Discord](https://img.shields.io/badge/Discord-Join%20Our%20Server-5865F2?logo=discord)](https://discord.gg/ykUv4kfg) [![Live Demo](https://img.shields.io/badge/Live-demo-Green?logo=live)](https://travel-genie--rishaannandan9.replit.app) 
+Travel-Genie is a web app that helps users plan trips effortlessly. Enter a destination and travel preferences, then get **personalized itineraries, suggestions, and travel details** — powered by modern web technologies and AI-assisted logic.
 
-![Travel Genie](https://img.shields.io/badge/Travel%20Genie-active-brightgreen?style=for-the-badge) [![Version](https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge)](https://github.com/Rishy-dek/Travel-Genie/releases)  
-
-**Description**  
-Travel-Genie is a web app that helps users plan trips effortlessly. Enter a destination and travel preferences, then get personalized itineraries, suggestions, and travel details — powered by modern web technologies and AI-assisted logic.
-
-**Live Demo:** <https://travel-genie--rishaannandan9.replit.app>
-
+**Live Demo:** [travel-genie--rishaannandan9.replit.app](https://travel-genie--rishaannandan9.replit.app)
 
 ---
 
 ## 🧠 Features
 
-> *Working on Sign-in feature, redirect links, sharing, saving*
+> *Currently working on Sign-in, redirect links, sharing, and saving*
 
-✅ **Chat Interface** - Real-time AI conversation with the user
-
-✅ **Hotel Search** - 10 AI-generated options sorted by price
-
-✅ **Search Results Carousel** - Horizontal scrolling through all options
-
-✅ **Hotel Details Panel** - Comprehensive information with 4 tabs:
-
-- Overview (price, amenities, description)
-- Travel Time (flight/drive/transit hours)
-- Food Recommendations (nearby restaurants with ratings)
-- Activities (things to do nearby)
-
-✅ **Booking Integration** - Direct links to booking platforms
-
-✅ **Persistent Chat History** - All messages saved to PostgreSQL
-
-✅ **AI-Powered Recommendations** - GPT-5 generates realistic options and details
-
-✅ **Multi-Platform Search** - Simulates TripIt, Hopper, Kayak, Skyscanner, Airbnb, Vrbo, Booking.com, Hotels.com
+- ✅ **Chat Interface** – Real-time AI conversation with the user  
+- ✅ **Hotel Search** – 10 AI-generated options sorted by price  
+- ✅ **Search Results Carousel** – Horizontal scrolling through options  
+- ✅ **Hotel Details Panel** – 4 tabs:  
+  - Overview (price, amenities, description)  
+  - Travel Time (flight/drive/transit hours)  
+  - Food Recommendations (nearby restaurants with ratings)  
+  - Activities (things to do nearby)  
+- ✅ **Booking Integration** – Direct links to booking platforms  
+- ✅ **Persistent Chat History** – Messages saved to PostgreSQL  
+- ✅ **AI-Powered Recommendations** – GPT-5 generates realistic options  
+- ✅ **Multi-Platform Search** – Simulates TripIt, Hopper, Kayak, Skyscanner, Airbnb, Vrbo, Booking.com, Hotels.com  
 
 ---
 
-## 🛠️ Built With
+## 🛠 Built With
 
-> *Tech Stack*
+### Frontend
+- **React** – UI Framework  
+- **TypeScript** – Type-safe JavaScript  
+- **Vite** – Build tool and dev server  
+- **Tailwind CSS** – Utility-first styling  
+- **shadcn/ui** – Reusable UI components  
+- **Framer Motion** – Smooth animations  
+- **TanStack React Query** – Data fetching and caching  
+- **Wouter** – Lightweight routing  
+- **Lucide React** – Icon library  
 
-- **Frontend:**
-  - **React** - UI Framework
-  - **TypeScript** - Type-safe JavaScript
-  - **Vite** - Build tool and dev server
-  - **Tailwind CSS** - Utility-first styling
-  - **shadcn/ui** - Reusable UI component library
-  - **Framer Motion** - Smooth animations and transitions
-  - **TanStack React Query** - Data fetching and caching
-  - **Wouter** - Lightweight routing
-  - **Lucide React** - Icon library
-- **Backend:**
-  - **Express.js** - Web server framework
-  - **PostgreSQL** - Database(via Replit's built-in Neon-backed database)
-  - **Drizzle ORM** - Type-safe database queries
-  - **OpenAI API** - GPT-5 for AI responses(via Replit's AI Integrations)
-  - **TypeScript** - Type safety
-- **AI / APIs:**
-  - **GET** `/api/chat/history`
-    - Retrieves entire chat conversation history
-    - Returns array of messages with results/options
-  - **POST** `/api/chat`
-    - Sends user message to AI
-    - AI generates response + 10 hotel/rental options
-    - Stores both user message and AI response in database
-    - Returns JSON with MESSAGE and results array
-  - **POST** `/api/chat/details`
-    - Fetches comprehensive details for a selected hotel
-    - Returns travel times, restaurant recommendations, activities, price breakdowns
-    - Data is AI-generated based on hotel name and location
+### Backend
+- **Express.js** – Web server framework  
+- **PostgreSQL** – Database (via Replit’s Neon-backed DB)  
+- **Drizzle ORM** – Type-safe database queries  
+- **TypeScript** – Type safety  
+- **OpenAI API** – GPT-5 for AI responses  
 
-> *AI - OpenAI API*
-
-- **Hosting / Deployment / Code Creation:** Replit      ![Replit Logo](client/public/favicon.png)
+### API Endpoints
+- `GET /api/chat/history` – Retrieves full chat history  
+- `POST /api/chat` – Sends user message, generates AI response & options  
+- `POST /api/chat/details` – Fetches detailed info for selected hotels
 
 ---
 
