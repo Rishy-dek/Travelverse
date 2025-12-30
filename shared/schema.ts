@@ -1,18 +1,31 @@
-import { pgTable, text, serial, timestamp, jsonb } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, timestamp, jsonb, integer } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
+
+export const users = pgTable("users", {
+  id: serial("id").primaryKey(),
+  email: text("email").notNull().unique(),
+  password: text("password").notNull(),
+  country: text("country").notNull(),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+
 export const messages = pgTable("messages", {
   id: serial("id").primaryKey(),
+  userId: integer("user_id").notNull(),
   role: text("role").notNull(), // 'user' or 'assistant'
   content: text("content").notNull(),
   results: jsonb("results"), // Optional search results
   createdAt: timestamp("created_at").defaultNow(),
 });
 
+
 export const insertMessageSchema = createInsertSchema(messages).omit({ id: true, createdAt: true });
 export type Message = typeof messages.$inferSelect;
 export type InsertMessage = z.infer<typeof insertMessageSchema>;
+
 
 export type SearchResult = {
   id: string;
@@ -27,6 +40,7 @@ export type SearchResult = {
   description: string;
   bookingUrl?: string; // URL to book the hotel
 };
+
 
 export type HotelDetail = {
   id: string;
@@ -62,3 +76,8 @@ export type HotelDetail = {
     estimatedTotal: string;
   };
 };
+
+
+
+
+
