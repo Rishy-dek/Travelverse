@@ -2,7 +2,8 @@
 
 # <p align="center" style="color: #CB8362">✈️ Travel Genie</p>
 
-<p align="center">
+<br>
+
   [![GitHub stars](https://img.shields.io/github/stars/Rishy-dek/Travel-Genie?style=for-the-badge&logo=github)](https://github.com/Rishy-dek/Travel-Genie)
   [![License](https://img.shields.io/github/license/Rishy-dek/Travel-Genie?style=for-the-badge)](https://github.com/Rishy-dek/Travel-Genie/blob/main/LICENSE)
   [![Last Commit](https://img.shields.io/github/last-commit/Rishy-dek/Travel-Genie?style=for-the-badge)](https://github.com/Rishy-dek/Travel-Genie/commits/main)
@@ -10,13 +11,13 @@
   [![Forks](https://img.shields.io/github/forks/Rishy-dek/Travel-Genie?style=for-the-badge&logo=github)](https://github.com/Rishy-dek/Travel-Genie/network)
   [![Downloads](https://img.shields.io/github/downloads/Rishy-dek/Travel-Genie/total?style=for-the-badge)](https://github.com/Rishy-dek/Travel-Genie/releases)
   [![Issues](https://img.shields.io/github/issues/Rishy-dek/Travel-Genie?style=for-the-badge&logo=github&color=red)](https://github.com/Rishy-dek/Travel-Genie/issues)
-</p>
 
-<p align="center">
+
+
   [![Join Discord](https://img.shields.io/badge/Discord-Join%20Our%20Server-5865F2?logo=discord&style=for-the-badge)](https://discord.gg/ykUv4kfg)
   [![Live Demo](https://img.shields.io/badge/Live-Demo-green?logo=live&style=for-the-badge)](https://travel-genie--rishaannandan9.replit.app)
   [![Version](https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge)](https://github.com/Rishy-dek/Travel-Genie/releases)
-</p>
+
 
 ---
 
