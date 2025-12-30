@@ -2,6 +2,31 @@ import { z } from 'zod';
 import { insertMessageSchema, messages } from './schema';
 
 export const api = {
+  auth: {
+    signup: {
+      method: 'POST' as const,
+      path: '/api/auth/signup',
+      input: z.object({ 
+        email: z.string().email(), 
+        password: z.string().min(6),
+        country: z.string()
+      }),
+      responses: {
+        200: z.object({ id: z.number(), email: z.string() })
+      }
+    },
+    login: {
+      method: 'POST' as const,
+      path: '/api/auth/login',
+      input: z.object({ 
+        email: z.string().email(), 
+        password: z.string()
+      }),
+      responses: {
+        200: z.object({ id: z.number(), email: z.string(), country: z.string() })
+      }
+    }
+  },
   chat: {
     send: {
       method: 'POST' as const,
