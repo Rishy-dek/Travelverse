@@ -155,11 +155,11 @@ AI_INTEGRATIONS_OPENAI_API_KEY=your_openai_key
 
 **Currently:** No testing framework is installed. The npm scripts only include:
 
-- npm run dev - Start development server
-- npm run build - Build for production
-- npm run start - Run production build
-- npm run check - TypeScript type checking
-- npm run db:push - Database migrations
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Run production build
+- `npm run check` - TypeScript type checking
+- `npm run db:push` - Database migrations
 
 To add tests, you'd need to install a framework like Jest, Vitest, or Cypress.
 
