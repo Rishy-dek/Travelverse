@@ -5,6 +5,7 @@ import { api } from "@shared/routes";
 import { z } from "zod";
 import OpenAI from "openai";
 
+
 export async function registerRoutes(
   httpServer: Server,
   app: Express
@@ -14,58 +15,82 @@ export async function registerRoutes(
     baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL
   });
 
+
   // Seed
-  const existing = await storage.getMessages();
-  if (existing.length === 0) {
-    await storage.createMessage({
-      role: "assistant",
-      content: "Hello! I'm your AI travel concierge. I can help you find hotels, rentals, flights, and more across TripIt, Hopper, Kayak, Skyscanner, Airbnb, Vrbo, Booking.com, and Hotels.com. Where would you like to go?",
-      results: null
-    });
+  // Seed (create a generic assistant message for system use if no messages exist for a demo user id=1)
+  try {
+    const existing = await storage.getMessages(1).catch(() => []);
+    if (existing.length === 0) {
+      await storage.createMessage({
+        userId: 1,
+        role: "assistant",
+        content: "Hello! I'm your AI travel concierge. I can help you find hotels, rentals, flights, and more across TripIt, Hopper, Kayak, Skyscanner, Airbnb, Vrbo, Booking.com, and Hotels.com. Where would you like to go?",
+        results: null
+      });
+    }
+  } catch (e) {
+    console.warn("Seeding skipped:", e);
   }
 
+
   app.get(api.chat.history.path, async (req, res) => {
-    const history = await storage.getMessages();
-    res.json(history);
+    try {
+      const userHeader = req.headers["x-user-id"] as string | undefined;
+      const userId = userHeader ? parseInt(userHeader, 10) : NaN;
+      if (!userId || Number.isNaN(userId)) return res.status(400).json({ message: "Missing or invalid user id (x-user-id)" });
+      const history = await storage.getMessages(userId);
+      res.json(history);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: "Failed to fetch history" });
+    }
   });
+
 
   app.post(api.chat.send.path, async (req, res) => {
     try {
       const { message } = api.chat.send.input.parse(req.body);
+      const userHeader = req.headers["x-user-id"] as string | undefined;
+      const userId = userHeader ? parseInt(userHeader, 10) : NaN;
+      if (!userId || Number.isNaN(userId)) return res.status(400).json({ message: "Missing or invalid user id (x-user-id)" });
+
 
       // Save user message
       await storage.createMessage({
+        userId,
         role: "user",
         content: message,
         results: null
       });
 
+
       // Get history for context
-      const history = await storage.getMessages();
+      const history = await storage.getMessages(userId);
       const messages = history.map(msg => ({
         role: msg.role as "user" | "assistant",
         content: msg.content
       }));
 
+
       // System prompt
       const systemPrompt = `You are a sophisticated AI travel assistant connected to TripIt, Hopper, Kayak, Skyscanner, Airbnb, Vrbo, Booking.com, and Hotels.com.
-      
+
       Your goal is to help the user find the perfect travel option (hotel, rental, flight, etc.).
-      
+
       Process:
       1. Analyze the user's request.
       2. If you need more information (location, dates, guests, amenities, price range, view preference), ask for it ONE by ONE or in small groups.
       3. If the user provides enough information, "search" for options.
       4. Since you cannot truly search, GENERATE 10 realistic, high-quality options that match their criteria exactly.
       5. Assign each option to a specific source (e.g., "Booking.com", "Airbnb").
-      
+
       Response Format:
       You must ALWAYS return a JSON object. Do not return markdown blocks.
       {
         "message": "Your text response to the user (e.g. asking clarifying questions or introducing the results)",
         "results": [ ... ] // Array of 10 options if you have enough info, otherwise null or empty array.
       }
-      
+
       Result Object Structure:
       {
         "id": "unique_id_like_hotel_123",
@@ -81,8 +106,10 @@ export async function registerRoutes(
         "bookingUrl": "https://booking.com/hotel/123"
       }
 
+
       For images, use specific Unsplash keywords in the URL like 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80'. Try to vary them.
       `;
+
 
       const response = await openai.chat.completions.create({
         model: "gpt-5",
@@ -94,19 +121,25 @@ export async function registerRoutes(
         response_format: { type: "json_object" }
       });
 
+
       const content = response.choices[0].message.content;
       if (!content) throw new Error("No response from AI");
 
+
       const parsedResponse = JSON.parse(content);
+
 
       // Save assistant message
       await storage.createMessage({
+        userId,
         role: "assistant",
         content: parsedResponse.message,
         results: parsedResponse.results || null
       });
 
+
       res.json(parsedResponse);
+
 
     } catch (err) {
       console.error(err);
@@ -114,14 +147,44 @@ export async function registerRoutes(
     }
   });
 
+
+  app.post(api.auth.signup.path, async (req, res) => {
+    try {
+      const { email, password, country } = api.auth.signup.input.parse(req.body);
+      const userId = await storage.createUser(email, password, country);
+      res.json({ id: userId, email });
+    } catch (err: any) {
+      console.error(err);
+      if (err.code === '23505') {
+        return res.status(400).json({ message: "Email already exists" });
+      }
+      res.status(500).json({ message: "Failed to sign up" });
+    }
+  });
+
+  app.post(api.auth.login.path, async (req, res) => {
+    try {
+      const { email, password } = api.auth.login.input.parse(req.body);
+      const user = await storage.findUserByEmailAndPassword(email, password);
+      if (!user) {
+        return res.status(401).json({ message: "Invalid email or password" });
+      }
+      res.json(user);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: "Failed to log in" });
+    }
+  });
+
   app.post(api.chat.details.path, async (req, res) => {
     try {
       const { hotelId, hotelName, location, fromLocation } = api.chat.details.input.parse(req.body);
 
-      const detailsPrompt = `You are a travel expert. Generate comprehensive travel information for the hotel "${hotelName}" in "${location}". 
-      
+
+      const detailsPrompt = `You are a travel expert. Generate comprehensive travel information for the hotel "${hotelName}" in "${location}".
+
       The user is traveling from "${fromLocation}".
-      
+
       Return ONLY a valid JSON object (no markdown, no extra text). Structure:
       {
         "id": "${hotelId}",
@@ -157,20 +220,26 @@ export async function registerRoutes(
         }
       }`;
 
+
       const response = await openai.chat.completions.create({
         model: "gpt-5",
         messages: [{ role: "user", content: detailsPrompt }],
         response_format: { type: "json_object" }
       });
 
+
       const content = response.choices[0].message.content;
       if (!content) throw new Error("No response from AI");
 
+
       const details = JSON.parse(content);
+
 
       const message = `Great choice! Here's everything you need to know about ${hotelName}. You can book directly using the link on the details panel.`;
 
+
       res.json({ message, details });
+
 
     } catch (err) {
       console.error(err);
@@ -180,3 +249,8 @@ export async function registerRoutes(
 
   return httpServer;
 }
+
+
+
+
+
