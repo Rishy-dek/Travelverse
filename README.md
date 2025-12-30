@@ -1,14 +1,8 @@
-<dev align = "center">
 
-[![Travel-Genie Logo](https://replit.com/cdn-cgi/image/width=128,quality=80,format=auto/https://storage.googleapis.com/replit/images/1766866019980_547f64dbeca56e2966407975525ee9ce.png)](https://travel-genie--rishaannandan9.replit.app)
 
-</dev>
+[![Travel-Genie Logo](https://replit.com/cdn-cgi/image/width=128,quality=80,format=auto/https://storage.googleapis.com/replit/images/1766866019980_547f64dbeca56e2966407975525ee9ce.png)](https://travel-genie--rishaannandan9.replit.app) # <p style="color: #CB8362">✈️ Travel Genie</p>
 
-<dev align = "center">
 
-# <p style="color: #CB8362">✈️ Travel Genie</p>
-
-</dev>
 
 [![GitHub stars](https://img.shields.io/github/stars/Rishy-dek/Travel-Genie) ![Repository License](https://img.shields.io/github/license/Rishy-dek/Travel-Genie) ![Repository's Last Commit](https://img.shields.io/github/last-commit/Rishy-dek/Travel-Genie) ![Repository's Contributors](https://img.shields.io/github/contributors/Rishy-dek/Travel-Genie) ![GitHub Forks](https://img.shields.io/github/forks/Rishy-dek/Travel-Genie)](https://github.com/Rishy-dek/Travel-Genie) [![GitHub Releases](https://img.shields.io/github/downloads/Rishy-dek/Travel-Genie/total)](https://github.com/Rishy-dek/Travel-Genie/releases) [![Issues](https://img.shields.io/github/issues/Rishy-dek/Travel-Genie?logo=github&color=red)](https://github.com/Rishy-dek/Travel-Genie/issues)
 
