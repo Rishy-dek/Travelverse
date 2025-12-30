@@ -20,9 +20,25 @@
 
 
   [![Join Discord](https://img.shields.io/badge/Discord-Join%20Our%20Server-5865F2?logo=discord&style=for-the-badge)](https://discord.gg/ykUv4kfg)
-  [![Join Feature-Demo](https://img.shields.io/badge/Discord-Join%20The%20Event%20For%20FeatureDemo-5865F2?logo=discord&style=for-the-badge)](https://discord.gg/YMmGUhWC?event=1455650583217438792)
   [![Live Demo](https://img.shields.io/badge/Live-Demo-green?logo=live&style=for-the-badge)](https://travel-genie--rishaannandan9.replit.app)
   [![Version](https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge)](https://github.com/Rishy-dek/Travel-Genie/releases)
+
+## Events
+
+<p align="center">
+  ✨🌀✨  
+</p>
+
+<p align="center">
+  <a href="https://discord.gg/YMmGUhWC?event=1455650583217438792">
+    <img src="https://img.shields.io/badge/🚀%20Feature%20Demo-Join%20Live%20on%20Discord-5865F2?logo=discord&style=for-the-badge">
+  </a>
+</p>
+
+<p align="center">
+  ✨🌀✨
+</p>
+
 
 
 ---
